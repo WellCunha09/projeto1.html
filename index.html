@@ -11,22 +11,22 @@
 </head>
 
 <body>
-  <div id="caixa">
+  <!-- atributo 'oninput' para a geração de um novo resultado a cada alteração do input -->
+  <form oninput="resultado.value = horasParaDias(horas.value)" id="caixa">
 
     <h1>Conversor de horas</h1>
 
     <div id="caixa2">
 
-      <label>Infome a quantidade de horas:<br /></label>
-      <input id="n1" type="number" /><br />
-  
-      <button onclick="converter()">Converter</button>
-      
-      <span id="resultado"></span>
+      <label>Infome a quantidade de horas:</label>
+      <input name="horas" id="n1" type="number" value="0" />
+      <br>
+      <!-- tag <output> para saída de resultados -->
+      <output name="resultado" for="horas"></output>
 
     </div>
 
-  </div>
+  </form>
 
 </body>
 
