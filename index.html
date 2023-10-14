@@ -4,29 +4,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Conversor de Horas para Dias</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
-
 </head>
 
 <body>
-  <!-- atributo 'oninput' para a geração de um novo resultado a cada alteração do input -->
-  <form oninput="resultado.value = horasParaDias(horas.value)" id="caixa">
+  
+  <form id="caixa">
 
     <h1>Conversor de horas</h1>
 
     <div id="caixa2">
 
       <label>Infome a quantidade de horas:</label>
-      <input name="horas" id="n1" type="number" value="0" />
+      <!-- atributo 'oninput' para a geração de um novo resultado a cada alteração do input -->
+      <input oninput="chamarFuncoes(this.value)" name="horas" id="n1" type="number"/>
       <br>
       <!-- tag <output> para saída de resultados -->
-      <output name="resultado" for="horas"></output>
+      <output id="dias" name="resultado" for="horas">0.00</output><span>  Dias</span>
+      <br>
+      <output id="minutos" name="minutos" for="horas">0.00</output><span>  Minutos</span>
+      <br>
+      <output id="segundos" name="segundos" for="horas">0.00</output><span>  Segundos</span>
 
     </div>
 
   </form>
+  <!-- tag script sempre ao final da tag body-->
+  <script src="script.js"></script>
 
 </body>
 
